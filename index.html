@@ -12,11 +12,8 @@
       --line:rgba(255,255,255,.12);
       --text:#f8fafc;
       --muted:#cbd5e1;
-      --blue:#60a5fa;
       --blue2:#2563eb;
       --gold:#f6d68a;
-      --gold2:#f59e0b;
-      --slate:#334155;
       --emerald:#059669;
       --shadow:0 20px 60px rgba(0,0,0,.35);
       --radius:24px;
@@ -32,210 +29,75 @@
         radial-gradient(circle at bottom, rgba(96,165,250,.14), transparent 32%);
       pointer-events:none;
     }
-    .wrap{
-      width:min(100%, 1180px);
-      margin:0 auto;
-      padding:16px;
-    }
-    .grid{
-      display:grid;
-      gap:18px;
-      align-items:start;
-    }
+    .wrap{width:min(100%,1180px);margin:0 auto;padding:16px}
+    .grid{display:grid;gap:18px;align-items:start}
     .hero-card,.info-card,.action-card,.tagline{
-      border:1px solid var(--line);
-      background:var(--card);
+      border:1px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.08);
       backdrop-filter: blur(10px);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
+      border-radius:24px;
+      box-shadow:0 20px 60px rgba(0,0,0,.35);
     }
-    .hero-card{
-      overflow:hidden;
-      position:relative;
-    }
+    .hero-card{overflow:hidden;position:relative}
+    .hero-image-link{display:block;background:#020617}
     .hero-image{
       width:100%;
-      height:52svh;
-      min-height:420px;
-      object-fit:cover;
+      height:auto;
+      max-height:78svh;
       display:block;
+      object-fit:contain;
+      background:#020617;
     }
     .hero-overlay{
-      position:absolute; left:0; right:0; bottom:0;
+      position:absolute;left:0;right:0;bottom:0;
       padding:20px;
       background:linear-gradient(180deg, transparent 0%, rgba(2,6,23,.18) 25%, rgba(2,6,23,.88) 100%);
     }
     .eyebrow{
-      display:inline-flex;
-      padding:7px 12px;
-      border-radius:999px;
-      font-size:12px;
-      font-weight:700;
-      letter-spacing:.04em;
-      color:#dbeafe;
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.12);
+      display:inline-flex;padding:7px 12px;border-radius:999px;font-size:12px;font-weight:700;
+      letter-spacing:.04em;color:#dbeafe;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
     }
-    .title{
-      margin:14px 0 0;
-      font-size:34px;
-      line-height:1.05;
-      letter-spacing:-.03em;
-      font-weight:900;
-    }
+    .title{margin:14px 0 0;font-size:34px;line-height:1.05;letter-spacing:-.03em;font-weight:900}
     .title .accent{display:block;color:#93c5fd}
-    .hero-sub{
-      margin:10px 0 0;
-      color:var(--muted);
-      font-size:15px;
-      line-height:1.55;
-    }
-    .stack{display:grid; gap:12px}
+    .hero-sub{margin:10px 0 0;color:#cbd5e1;font-size:15px;line-height:1.55}
+    .stack{display:grid;gap:12px}
     .info-card{padding:16px}
-    .label{
-      font-size:12px;
-      color:#bfdbfe;
-      font-weight:800;
-      letter-spacing:.05em;
-      text-transform:uppercase;
-    }
-    .date-box{
-      background:linear-gradient(180deg, rgba(245,158,11,.16), rgba(245,158,11,.08));
-      border-color:rgba(245,158,11,.28);
-    }
-    .date-main{
-      margin-top:4px;
-      font-weight:900;
-      font-size:32px;
-      line-height:1.08;
-      letter-spacing:-.03em;
-    }
-    .date-sub{
-      margin-top:8px;
-      font-size:14px;
-      color:#fde68a;
-      font-weight:700;
-    }
-    .speaker,.topic{
-      font-size:30px;
-      line-height:1.12;
-      margin-top:4px;
-      font-weight:900;
-      letter-spacing:-.03em;
-    }
+    .label{font-size:12px;color:#bfdbfe;font-weight:800;letter-spacing:.05em;text-transform:uppercase}
+    .date-box{background:linear-gradient(180deg, rgba(245,158,11,.16), rgba(245,158,11,.08));border-color:rgba(245,158,11,.28)}
+    .date-main{margin-top:4px;font-weight:900;font-size:32px;line-height:1.08;letter-spacing:-.03em}
+    .date-sub{margin-top:8px;font-size:14px;color:#fde68a;font-weight:700}
+    .speaker,.topic{font-size:30px;line-height:1.12;margin-top:4px;font-weight:900;letter-spacing:-.03em}
     .topic{font-size:28px}
-    .mini-grid{
-      display:grid;
-      gap:12px;
-    }
-    .mini-title{
-      font-size:12px;
-      color:var(--muted);
-      font-weight:800;
-      letter-spacing:.05em;
-    }
-    .mini-value{
-      margin-top:4px;
-      font-size:26px;
-      font-weight:900;
-      color:#dbeafe;
-    }
-    .mini-copy{
-      margin-top:4px;
-      font-size:17px;
-      line-height:1.45;
-      font-weight:700;
-    }
+    .mini-grid{display:grid;gap:12px}
+    .mini-title{font-size:12px;color:#cbd5e1;font-weight:800;letter-spacing:.05em}
+    .mini-value{margin-top:4px;font-size:26px;font-weight:900;color:#dbeafe}
+    .mini-copy{margin-top:4px;font-size:17px;line-height:1.45;font-weight:700}
     .action-card{padding:16px}
-    .section-title{
-      font-size:18px;
-      font-weight:900;
-      color:#dbeafe;
-      margin:0 0 12px;
+    .section-title{font-size:18px;font-weight:900;color:#dbeafe;margin:0 0 12px}
+    .buttons{display:grid;gap:10px;grid-template-columns:1fr}
+    .btn{display:block;padding:16px 16px 15px;border-radius:18px;font-weight:900;box-shadow:0 12px 28px rgba(0,0,0,.18)}
+    .btn span{display:block;margin-top:5px;font-size:12px;opacity:.92;font-weight:600}
+    .btn-blue{background:#2563eb;color:white}
+    .btn-slate{background:#334155;color:white}
+    .btn-indigo{background:#4f46e5;color:white}
+    .btn-rose{background:#e11d48;color:white}
+    .btn-yellow{background:#fbbf24;color:#111827}
+    .btn-green{background:#059669;color:white}
+    .tagline{padding:18px 16px;text-align:center;background:linear-gradient(90deg, rgba(255,255,255,.10), rgba(255,255,255,.05))}
+    .tagline h2{margin:0;color:#f6d68a;font-size:31px;line-height:1.15;letter-spacing:-.03em}
+    .tagline p{margin:10px 0 0;color:#cbd5e1;font-size:15px;line-height:1.55}
+    .foot-note{margin-top:10px;text-align:center;color:#94a3b8;font-size:12px}
+    @media (max-width:430px){
+      .title{font-size:31px}.date-main{font-size:28px}.speaker{font-size:28px}.topic{font-size:25px}.tagline h2{font-size:27px}
     }
-    .buttons{
-      display:grid;
-      gap:10px;
+    @media (min-width:760px){
+      .wrap{padding:22px}.mini-grid{grid-template-columns:1fr 1fr}.buttons{grid-template-columns:1fr 1fr}.hero-image{max-height:82svh}
     }
-    .btn{
-      display:block;
-      padding:16px 16px 15px;
-      border-radius:18px;
-      font-weight:900;
-      box-shadow:0 12px 28px rgba(0,0,0,.18);
-    }
-    .btn span{
-      display:block;
-      margin-top:5px;
-      font-size:12px;
-      opacity:.92;
-      font-weight:600;
-    }
-    .btn-blue{background:var(--blue2); color:white}
-    .btn-slate{background:#334155; color:white}
-    .btn-yellow{background:#fbbf24; color:#111827}
-    .btn-green{background:var(--emerald); color:white}
-    .tagline{
-      padding:18px 16px;
-      text-align:center;
-      background:linear-gradient(90deg, rgba(255,255,255,.10), rgba(255,255,255,.05));
-    }
-    .tagline h2{
-      margin:0;
-      color:var(--gold);
-      font-size:31px;
-      line-height:1.15;
-      letter-spacing:-.03em;
-    }
-    .tagline p{
-      margin:10px 0 0;
-      color:var(--muted);
-      font-size:15px;
-      line-height:1.55;
-    }
-    .foot-note{
-      margin-top:10px;
-      text-align:center;
-      color:#94a3b8;
-      font-size:12px;
-    }
-
-    @media (max-width: 430px){
-      .hero-image{height:47svh; min-height:360px}
-      .title{font-size:31px}
-      .date-main{font-size:28px}
-      .speaker{font-size:28px}
-      .topic{font-size:25px}
-      .tagline h2{font-size:27px}
-    }
-
-    @media (min-width: 760px){
-      .wrap{padding:22px}
-      .mini-grid{grid-template-columns:1fr 1fr}
-      .buttons{grid-template-columns:1fr 1fr}
-    }
-
-    @media (min-width: 1040px){
-      .grid{
-        grid-template-columns: 0.98fr 1.02fr;
-        gap:28px;
-        min-height:100svh;
-        align-items:center;
-      }
-      .wrap{padding:28px}
-      .hero-image{
-        height:82svh;
-        min-height:720px;
-      }
-      .hero-overlay{padding:28px}
-      .title{font-size:58px}
-      .hero-sub{font-size:18px}
-      .info-card,.action-card,.tagline{padding:22px}
-      .date-main{font-size:44px}
-      .speaker{font-size:42px}
-      .topic{font-size:38px}
-      .tagline h2{font-size:44px}
-      .tagline p{font-size:17px}
+    @media (min-width:1040px){
+      .grid{grid-template-columns:0.98fr 1.02fr;gap:28px;min-height:100svh;align-items:center}
+      .wrap{padding:28px}.hero-overlay{padding:28px}.title{font-size:58px}.hero-sub{font-size:18px}
+      .info-card,.action-card,.tagline{padding:22px}.date-main{font-size:44px}.speaker{font-size:42px}.topic{font-size:38px}
+      .tagline h2{font-size:44px}.tagline p{font-size:17px}
     }
   </style>
 </head>
@@ -243,7 +105,9 @@
   <main class="wrap">
     <section class="grid">
       <article class="hero-card">
-        <img class="hero-image" src="https://i.imgur.com/gGopUov.jpeg" alt="박한용 목사님 세미나 이미지" />
+        <a class="hero-image-link" href="https://i.imgur.com/gGopUov.jpeg" target="_blank" rel="noreferrer">
+          <img class="hero-image" src="https://i.imgur.com/gGopUov.jpeg" alt="박한용 목사님 세미나 이미지" />
+        </a>
         <div class="hero-overlay">
           <div class="eyebrow">2026년 4월 온라인 세미나</div>
           <h1 class="title">목회 AI 연구소<span class="accent">4월 세미나</span></h1>
@@ -289,6 +153,14 @@
             <a class="btn btn-slate" href="https://forms.gle/xuBpoXtNA3cCwMwn8" target="_blank" rel="noreferrer">
               파트너 교회 신청
               <span>파트너십 접수</span>
+            </a>
+            <a class="btn btn-indigo" href="https://sunminchurch.my.canva.site/ai" target="_blank" rel="noreferrer">
+              연구소 홈페이지
+              <span>공식 홈페이지 바로가기</span>
+            </a>
+            <a class="btn btn-rose" href="https://youtube.com/channel/UCfHshFZgi2-Ke0Dvj2Rrk8A?si=d-abr0pzoRK1fHQo" target="_blank" rel="noreferrer">
+              유튜브 구독
+              <span>채널 바로가기</span>
             </a>
             <a class="btn btn-yellow" href="https://open.kakao.com/o/g8xjXlIg" target="_blank" rel="noreferrer">
               오픈카톡 참여
